@@ -1,24 +1,23 @@
-.vscode
+# ignored files
 
-
-/week01/datasets
-/week02
-/week03
-
-/week04/.ipynb_checkpoints
 **/.ipynb_checkpoints
+**/__pycache__/
+**/.vscode/
 
 /data/downloaded/MNIST/
 /data/csv/car_evaluation_processed.csv
 
+/week01/datasets
+/week02/training/logs/
+/week03
 /week04/ref.md
-/week04/dask-basics.ipynb
-/week04/dask-spark.ipynb
-/week04/ray-1.ipynb
+# /week04/dask-basics.ipynb
+# /week04/dask-spark.ipynb
+# /week04/ray-mnist-pytorch.py
 /week04/data/nycflights
 /week04/test
 /week04/mydask.png
-/week04/ray-mnist-pytorch.py
+
 /week04/nycflights.tar.gz
 
 /week05
