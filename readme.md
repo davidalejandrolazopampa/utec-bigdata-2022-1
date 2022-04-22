@@ -23,4 +23,15 @@ Index
    2. Lab: Examples.
 
 
-1.-
+Create environment
+
+```makefile
+make  conda-update
+conda activate utec-bigdata-2022-1
+```
+
+Install dependencies:
+
+```makefile
+make pip-tools
+```
