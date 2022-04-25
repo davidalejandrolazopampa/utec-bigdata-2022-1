@@ -6,8 +6,6 @@ help:
 # Previous installation:
 
 # install graphviz -> sudo apt install graphviz for dask
-# install mongodb --> sudo apt update && sudo apt install mongodb 
-
 
 # Install exact Python and CUDA versions
 conda-update:
