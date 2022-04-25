@@ -16,3 +16,6 @@ pandas
 keras
 tensorflow
 ray
+pymongo
+redis
+pyarrow
