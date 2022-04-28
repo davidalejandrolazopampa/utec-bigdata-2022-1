@@ -3,9 +3,14 @@
 **/.ipynb_checkpoints
 **/__pycache__/
 **/.vscode/
+/dask-worker-space/
+/data/csv/nycflights
+/data/csv/nycflights.tar.gz
 
 /data/downloaded/MNIST/
 /data/csv/car_evaluation_processed.csv
+
+/data/raw/
 
 /week01/datasets
 /week02/training/logs/
@@ -22,6 +27,10 @@
 
 /week05
 /week05/ref.md
+
+/week06/sentiment_*
+/week06/naive_bayes_model.pkl
+
 
 /week07
 /week08
