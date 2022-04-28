@@ -39,18 +39,26 @@ charset-normalizer==2.0.12
     # via
     #   aiohttp
     #   requests
-click==8.1.2
+click==8.0.2
     # via
+    #   -r requirements/prod.in
+    #   distributed
     #   flask
     #   ray
 cloudpickle==2.0.0
-    # via dask
-dask==2022.2.0
-    # via -r requirements/prod.in
+    # via
+    #   dask
+    #   distributed
+dask==2022.02.0
+    # via
+    #   -r requirements/prod.in
+    #   distributed
 deprecated==1.2.13
     # via redis
 distlib==0.3.4
     # via virtualenv
+distributed==2022.2.0
+    # via -r requirements/prod.in
 editdistance==0.6.0
     # via -r requirements/prod.in
 filelock==3.6.0
@@ -91,6 +99,8 @@ h5py==3.6.0
     # via
     #   -r requirements/prod.in
     #   tensorflow
+heapdict==1.0.1
+    # via zict
 idna==3.3
     # via
     #   requests
@@ -108,7 +118,9 @@ importlib-resources==5.7.1
 itsdangerous==2.1.2
     # via flask
 jinja2==3.1.1
-    # via flask
+    # via
+    #   distributed
+    #   flask
 jsonschema==4.4.0
     # via ray
 keras==2.8.0
@@ -126,7 +138,9 @@ markdown==3.3.6
 markupsafe==2.1.1
     # via jinja2
 msgpack==1.0.3
-    # via ray
+    # via
+    #   distributed
+    #   ray
 multidict==6.0.2
     # via
     #   aiohttp
@@ -152,6 +166,7 @@ opt-einsum==3.3.0
 packaging==21.3
     # via
     #   dask
+    #   distributed
     #   pytorch-lightning
     #   redis
     #   torchmetrics
@@ -168,6 +183,8 @@ protobuf==3.20.0
     #   ray
     #   tensorboard
     #   tensorflow
+psutil==5.9.0
+    # via distributed
 pyarrow==7.0.0
     # via -r requirements/prod.in
 pyasn1==0.4.8
@@ -195,6 +212,7 @@ pytz==2022.1
 pyyaml==6.0
     # via
     #   dask
+    #   distributed
     #   pytorch-lightning
     #   ray
 ray==1.12.0
@@ -226,6 +244,10 @@ six==1.16.0
     #   virtualenv
 smart-open==5.2.1
     # via -r requirements/prod.in
+sortedcontainers==2.4.0
+    # via distributed
+tblib==1.7.0
+    # via distributed
 tensorboard==2.8.0
     # via
     #   pytorch-lightning
@@ -247,6 +269,7 @@ toml==0.10.2
 toolz==0.11.2
     # via
     #   dask
+    #   distributed
     #   partd
 torch==1.11.0
     # via
@@ -260,6 +283,8 @@ torchmetrics==0.8.0
     #   pytorch-lightning
 torchvision==0.12.0
     # via -r requirements/prod.in
+tornado==6.1
+    # via distributed
 tqdm==4.64.0
     # via pytorch-lightning
 typing-extensions==4.2.0
@@ -292,6 +317,8 @@ wrapt==1.14.0
     #   tensorflow
 yarl==1.7.2
     # via aiohttp
+zict==2.2.0
+    # via distributed
 zipp==3.8.0
     # via
     #   importlib-metadata

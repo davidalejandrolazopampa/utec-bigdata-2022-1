@@ -32,6 +32,7 @@
 
 /week06/sentiment_*
 /week06/naive_bayes_model.pkl
+/week06/dask-distributed.ipynb
 
 
 /week07

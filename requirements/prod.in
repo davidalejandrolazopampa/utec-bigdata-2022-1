@@ -19,3 +19,5 @@ ray
 pymongo
 redis
 pyarrow
+distributed
+click==8.0.2
