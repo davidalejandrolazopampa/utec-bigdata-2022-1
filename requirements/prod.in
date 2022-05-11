@@ -15,9 +15,11 @@ graphviz
 pandas
 keras
 tensorflow
-ray
 pymongo
 redis
 pyarrow
 distributed
 click==8.0.2
+ray
+ray[tune]
+ray[rllib]
