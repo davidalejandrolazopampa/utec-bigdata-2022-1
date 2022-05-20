@@ -46,6 +46,8 @@ cloudpickle==2.0.0
     #   dask
     #   distributed
     #   gym
+confluent-kafka==1.8.2
+    # via -r requirements/prod.in
 cycler==0.11.0
     # via matplotlib
 dask==2022.02.0
