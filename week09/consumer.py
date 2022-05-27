@@ -13,7 +13,7 @@ class DataCapture():
             'request.timeout.ms': 120000,
         }
 
-    def consume(self, topic='bigdata-streams'):
+    def consume(self, topic='big-streams2'):
         self.consumer = Consumer(self.conf)
         self.topic = topic
         self.consumer.subscribe([self.topic])
