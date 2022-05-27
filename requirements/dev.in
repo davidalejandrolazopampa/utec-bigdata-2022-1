@@ -1,4 +1,5 @@
 -c prod.txt
+autopep8
 bandit
 black
 editdistance

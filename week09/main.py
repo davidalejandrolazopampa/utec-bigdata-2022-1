@@ -1,49 +1,22 @@
-from confluent_kafka import Consumer, TopicPartition
 
-class DataCapture():
-  def __init__(self):
-    self.conf = {
-      'bootstrap.servers': 'localhost:9092',
-      'group.id': 'test',
-      'auto.offset.reset': 'earliest',
-      'enable.auto.commit': 'false',
-      'max.poll.interval.ms': 500000,
-      'session.timeout.ms': 120000,
-      'request.timeout.ms': 120000,
-    }
-  
-  def consume(self, topic='bigdata-streams'):
-    self.consumer = Consumer(self.conf)
-    self.topic = topic
-    self.consumer.subscribe([self.topic])
-    try:
-      while True:
-        msg = self.consumer.poll(1.0)
-        if msg is None:
-            continue
-        user = msg.value()
-        partition = msg.partition()
-        offset = msg.offset()
 
-        if user is not None:
-            print(f"partition: {partition}")
-            print(f"offset: {offset}")
-            print(user)
-            # print(f'User name: {user.name}, '
-            #       f'favorite number:{user.favorite_number}, '
-            #       f'favorite color:{user.favorite_color}, '
-            #       f'twitter handle:{user.twitter_handle}')
-        # self.consumer.commit([TopicPartition(partition, offset)])
-        self.consumer.commit(
-            offsets=[TopicPartition(topic=self.topic,
-                                    partition=partition,
-                                    offset=offset+1)],asynchronous=False)
-    except KeyboardInterrupt:
-    
-      print("error")
-    print('closing the consumer')
-    self.consumer.close()
+"""zookeper
+    Apache kafka usa zookeper para almacenar metadatos del cluster de kafka y detalles de los consumidores
+    vim config/zookeeper.properties
+    ./zookeeper-server-start.sh ../config/zookeeper.properties
 
-  
-capture = DataCapture()
-capture.consume('bigdata-streams')
+    cp server.properties server-1.properties
+    cp server.properties server-2.properties
+    vim server-1.properties
+        broker.id=1
+        listeners=PLAINTEXT 
+    FACTOR DE REPLICACION - lista de nodos o brokers -> leader
+    import data/csv/Solaris_min15_Almeria_Spain.csv  -> produce
+    consume and send to redis - order and make forecasting
+    sklearn prediction - forecasting
+
+    slides -> factor de replicacion
+
+
+    do the project format !!
+"""
