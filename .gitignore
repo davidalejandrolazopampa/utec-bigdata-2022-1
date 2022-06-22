@@ -12,6 +12,8 @@
 /data/csv/car_evaluation_processed.csv
 
 /data/raw/
+/data/csv/clicks
+/data/csv/words.txt
 
 /week01/datasets
 /week02/training/logs/
@@ -39,5 +41,7 @@
 /week11
 /week12
 /week13
+/week14/jdbc
+log4j.properties
 todo.json
 test-score.md
